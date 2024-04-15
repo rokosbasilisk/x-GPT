@@ -91,6 +91,42 @@ class MLP(nn.Module):
         x = self.dropout(x)
         return x
 
+class BlockMLP(nn.Module):
+
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super().__init__()
+        self.gelu = nn.GELU()
+        self.fc1 = nn.Linear(input_dim, hidden_dim)
+        self.fc2 = nn.Linear(hidden_dim, output_dim)
+
+    def forward(self, x):
+        x = self.fc1(x)
+        x = self.gelu(x)
+        x = self.fc2(x)
+        return x
+
+class AdditiveMLP(nn.Module):
+    def __init__(self, embed_dim, hidden_dim, num_blocks):
+        super(AdditiveMLP, self).__init__()
+        self.num_blocks = num_blocks
+        block_dim = embed_dim // num_blocks
+        
+        # Dynamically create MLPs for each block
+        self.mlps = nn.ModuleList([BlockMLP(block_dim, hidden_dim, block_dim) for _ in range(num_blocks)])
+
+    def forward(self, x):
+        # Split the tensor along the second dimension (embed_dim)
+        block_size = x.shape[2] // self.num_blocks
+        blocks = torch.split(x, block_size, dim=2)
+        
+        # Apply MLPs to each block and collect the outputs
+        outputs = [mlp(block) for mlp, block in zip(self.mlps, blocks)]
+        
+        # Concatenate the outputs along the embedding dimension
+        output = torch.cat(outputs, dim=2)
+        return output
+
+
 class Block(nn.Module):
 
     def __init__(self, config):
@@ -99,10 +135,13 @@ class Block(nn.Module):
         self.attn = CausalSelfAttention(config)
         self.ln_2 = LayerNorm(config.n_embd, bias=config.bias)
         self.mlp = MLP(config)
+        # in this case this is going to be an auto-encoder style, since the in-out-dim size is same
+        self.a_mlp = AdditiveMLP(config.n_embd, (config.n_embd//config.n_head)*4 , config.n_head)
 
     def forward(self, x):
         x = x + self.attn(self.ln_1(x))
-        x = x + self.mlp(self.ln_2(x))
+        #TODO: add the additive mlp here
+        x = x + self.a_mlp(self.ln_2(x))
         return x
 
 @dataclass
