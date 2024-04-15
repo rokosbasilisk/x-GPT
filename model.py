@@ -141,7 +141,7 @@ class Block(nn.Module):
     def forward(self, x):
         x = x + self.attn(self.ln_1(x))
         #TODO: add the additive mlp here
-        x = x + self.a_mlp(self.ln_2(x))
+        x = x + self.mlp(self.ln_2(x))
         return x
 
 @dataclass
