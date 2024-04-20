@@ -1,0 +1,244 @@
+Traceback (most recent call last):
+  File "/home/loki/projects/adgpt/train.py", line 264, in <module>
+    losses = estimate_loss()
+             ^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/projects/adgpt/train.py", line 224, in estimate_loss
+    logits, loss = model(X, Y)
+                   ^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1519, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/nn/parallel/distributed.py", line 1355, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 328, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 487, in catch_errors
+    return hijacked_callback(frame, cache_entry, hooks, frame_state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 641, in _convert_frame
+    result = inner_convert(frame, cache_size, hooks, frame_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 133, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 389, in _convert_frame_assert
+    return _compile(
+           ^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 569, in _compile
+    guarded_code = compile_inner(code, one_graph, hooks, transform)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 491, in compile_inner
+    out_code = transform_code_object(code, transform)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/bytecode_transformation.py", line 1028, in transform_code_object
+    transformations(instructions, code_options)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 458, in transform
+    tracer.run()
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2069, in run
+    super().run()
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 719, in run
+    and self.step()
+        ^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 683, in step
+    getattr(self, inst.opname)(inst)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 392, in wrapper
+    return inner_fn(self, inst)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1723, in CALL
+    self.call_function(fn, args, kwargs)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 557, in call_function
+    self.push(fn.call_function(self, args, kwargs))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/variables/nn_module.py", line 331, in call_function
+    return tx.inline_user_function_return(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 593, in inline_user_function_return
+    result = InliningInstructionTranslator.inline_call(self, fn, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2174, in inline_call
+    return cls.inline_call_(parent, func, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2281, in inline_call_
+    tracer.run()
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 719, in run
+    and self.step()
+        ^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 683, in step
+    getattr(self, inst.opname)(inst)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 392, in wrapper
+    return inner_fn(self, inst)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1150, in CALL_FUNCTION_EX
+    self.call_function(fn, argsvars.items, kwargsvars.items)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 557, in call_function
+    self.push(fn.call_function(self, args, kwargs))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/variables/functions.py", line 307, in call_function
+    return super().call_function(tx, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/variables/functions.py", line 261, in call_function
+    return super().call_function(tx, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/variables/functions.py", line 90, in call_function
+    return tx.inline_user_function_return(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 593, in inline_user_function_return
+    result = InliningInstructionTranslator.inline_call(self, fn, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2174, in inline_call
+    return cls.inline_call_(parent, func, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2281, in inline_call_
+    tracer.run()
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 719, in run
+    and self.step()
+        ^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 683, in step
+    getattr(self, inst.opname)(inst)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 392, in wrapper
+    return inner_fn(self, inst)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1723, in CALL
+    self.call_function(fn, args, kwargs)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 557, in call_function
+    self.push(fn.call_function(self, args, kwargs))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/variables/nn_module.py", line 331, in call_function
+    return tx.inline_user_function_return(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 593, in inline_user_function_return
+    result = InliningInstructionTranslator.inline_call(self, fn, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2174, in inline_call
+    return cls.inline_call_(parent, func, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2281, in inline_call_
+    tracer.run()
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 719, in run
+    and self.step()
+        ^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 683, in step
+    getattr(self, inst.opname)(inst)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 392, in wrapper
+    return inner_fn(self, inst)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1150, in CALL_FUNCTION_EX
+    self.call_function(fn, argsvars.items, kwargsvars.items)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 557, in call_function
+    self.push(fn.call_function(self, args, kwargs))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/variables/functions.py", line 307, in call_function
+    return super().call_function(tx, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/variables/functions.py", line 261, in call_function
+    return super().call_function(tx, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/variables/functions.py", line 90, in call_function
+    return tx.inline_user_function_return(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 593, in inline_user_function_return
+    result = InliningInstructionTranslator.inline_call(self, fn, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2174, in inline_call
+    return cls.inline_call_(parent, func, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2281, in inline_call_
+    tracer.run()
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 719, in run
+    and self.step()
+        ^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 683, in step
+    getattr(self, inst.opname)(inst)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 392, in wrapper
+    return inner_fn(self, inst)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1723, in CALL
+    self.call_function(fn, args, kwargs)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 557, in call_function
+    self.push(fn.call_function(self, args, kwargs))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/variables/functions.py", line 90, in call_function
+    return tx.inline_user_function_return(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 593, in inline_user_function_return
+    result = InliningInstructionTranslator.inline_call(self, fn, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2174, in inline_call
+    return cls.inline_call_(parent, func, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2281, in inline_call_
+    tracer.run()
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 719, in run
+    and self.step()
+        ^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 683, in step
+    getattr(self, inst.opname)(inst)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 1031, in FOR_ITER
+    self.output.guards.update(it.guards)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_guards.py", line 492, in update
+    self.add(g, skip=1)
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_guards.py", line 481, in add
+    if guard in self.inner:
+       ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_guards.py", line 167, in __hash__
+    return hash((self.name, self.source, id(self.create_fn)))
+                 ^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_guards.py", line 188, in name
+    return self.originating_source.name()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/source.py", line 449, in name
+    return self.base.name()
+           ^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/source.py", line 195, in name
+    return f"{self.base.name()}.{self.member}"
+              ^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/source.py", line 449, in name
+    return self.base.name()
+           ^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/source.py", line 195, in name
+    return f"{self.base.name()}.{self.member}"
+              ^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/source.py", line 449, in name
+    return self.base.name()
+           ^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/lib/python3.11/site-packages/torch/_dynamo/source.py", line 341, in name
+    def name(self):
+KeyboardInterrupt
+Exception ignored in: <module 'threading' from '/home/loki/anaconda3/lib/python3.11/threading.py'>
+Traceback (most recent call last):
+  File "/home/loki/anaconda3/lib/python3.11/threading.py", line 1553, in _shutdown
+    atexit_call()
+  File "/home/loki/anaconda3/lib/python3.11/concurrent/futures/process.py", line 95, in _python_exit
+    t.join()
+  File "/home/loki/anaconda3/lib/python3.11/threading.py", line 1112, in join
+    self._wait_for_tstate_lock()
+  File "/home/loki/anaconda3/lib/python3.11/threading.py", line 1132, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt:

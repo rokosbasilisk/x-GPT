@@ -1,0 +1,12 @@
+
+step 0: train loss 10.9116, val loss 10.9079
+iter 0: loss 10.9221, time 64266.21ms, mfu -100.00%
+Traceback (most recent call last):
+  File "/home/loki/projects/adgpt/train.py", line 306, in <module>
+    scaler.scale(loss).backward()
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/autograd/__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+Exception ignored in: <module 'threading' from '/home/loki/anaconda3/envs/rb/lib/python3.11/threading.py'>

@@ -1,0 +1,167 @@
+
+step 0: train loss 10.9745, val loss 10.9734
+Traceback (most recent call last):
+  File "/home/loki/projects/nanoGPT/train.py", line 300, in <module>
+    logits, loss = model(X, Y)
+                   ^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 328, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 490, in catch_errors
+    return callback(frame, cache_entry, hooks, frame_state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 641, in _convert_frame
+    result = inner_convert(frame, cache_size, hooks, frame_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 133, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 389, in _convert_frame_assert
+    return _compile(
+           ^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 569, in _compile
+    guarded_code = compile_inner(code, one_graph, hooks, transform)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 491, in compile_inner
+    out_code = transform_code_object(code, transform)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/bytecode_transformation.py", line 1028, in transform_code_object
+    transformations(instructions, code_options)
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 458, in transform
+    tracer.run()
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2074, in run
+    super().run()
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 724, in run
+    and self.step()
+        ^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 688, in step
+    getattr(self, inst.opname)(inst)
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 2162, in RETURN_VALUE
+    self.output.compile_subgraph(
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 857, in compile_subgraph
+    self.compile_and_call_fx_graph(tx, pass2.graph_output_vars(), root)
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 957, in compile_and_call_fx_graph
+    compiled_fn = self.call_user_compiler(gm)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/output_graph.py", line 1009, in call_user_compiler
+    compiled_fn = compiler_fn(gm, self.example_inputs())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/repro/after_dynamo.py", line 117, in debug_wrapper
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/__init__.py", line 1568, in __call__
+    return compile_fx(model_, inputs_, config_patches=self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 1150, in compile_fx
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/backends/common.py", line 55, in compiler_fn
+    cg = aot_module_simplified(gm, example_inputs, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 3891, in aot_module_simplified
+    compiled_fn = create_aot_dispatcher_function(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 3429, in create_aot_dispatcher_function
+    compiled_fn = compiler_fn(flat_fn, fake_flat_args, aot_config, fw_metadata=fw_metadata)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 2212, in aot_wrapper_dedupe
+    return compiler_fn(flat_fn, leaf_flat_args, aot_config, fw_metadata=fw_metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 2392, in aot_wrapper_synthetic_base
+    return compiler_fn(flat_fn, flat_args, aot_config, fw_metadata=fw_metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py", line 2917, in aot_dispatch_autograd
+    compiled_fw_func = aot_config.fw_compiler(
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 1092, in fw_compiler_base
+    return inner_compile(
+           ^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_dynamo/repro/after_aot.py", line 80, in debug_wrapper
+    inner_compiled_fn = compiler_fn(gm, example_inputs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_inductor/debug.py", line 228, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 54, in newFunction
+    return old_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 341, in compile_fx_inner
+    compiled_graph: CompiledFxGraph = fx_codegen_and_compile(
+                                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 528, in fx_codegen_and_compile
+    fake_mode = fake_tensor_prop(gm, example_inputs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_inductor/compile_fx.py", line 275, in fake_tensor_prop
+    FakeTensorProp(gm, mode=fake_mode).propagate_dont_convert_inputs(
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/fx/passes/fake_tensor_prop.py", line 61, in propagate_dont_convert_inputs
+    return super().run(*args)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/fx/interpreter.py", line 138, in run
+    self.env[node] = self.run_node(node)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/fx/passes/fake_tensor_prop.py", line 47, in run_node
+    meta = map_aggregate(result, extract_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/fx/node.py", line 650, in map_aggregate
+    return immutable_list(map_aggregate(elem, fn) for elem in a)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/fx/node.py", line 650, in <genexpr>
+    return immutable_list(map_aggregate(elem, fn) for elem in a)
+                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/fx/node.py", line 656, in map_aggregate
+    return fn(a)
+           ^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/fx/passes/fake_tensor_prop.py", line 37, in extract_val
+    return snapshot_fake(obj)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/fx/experimental/proxy_tensor.py", line 115, in snapshot_fake
+    return val.detach()
+           ^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/utils/_stats.py", line 20, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_subclasses/fake_tensor.py", line 1250, in __torch_dispatch__
+    return self.dispatch(func, types, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_subclasses/fake_tensor.py", line 1350, in dispatch
+    unrecognized_types = self.check_for_subclass(args, kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_subclasses/fake_tensor.py", line 1566, in check_for_subclass
+    type(x) for x in tree_flatten_only(torch.Tensor, (args, kwargs)) if check(x)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_subclasses/fake_tensor.py", line 209, in tree_flatten_only
+    return [elem for elem in flat_vals if isinstance(elem, ty)]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_subclasses/fake_tensor.py", line 209, in <listcomp>
+    return [elem for elem in flat_vals if isinstance(elem, ty)]
+KeyboardInterrupt

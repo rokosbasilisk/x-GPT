@@ -1,0 +1,144 @@
+2024-04-21 00:49:24,215 INFO    StreamThr :178402 [internal.py:wandb_internal():86] W&B internal server running at pid: 178402, started at: 2024-04-21 00:49:24.214910
+2024-04-21 00:49:24,216 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: status
+2024-04-21 00:49:24,217 INFO    WriterThread:178402 [datastore.py:open_for_write():85] open: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/run-8h4urn3d.wandb
+2024-04-21 00:49:24,217 DEBUG   SenderThread:178402 [sender.py:send():382] send: header
+2024-04-21 00:49:24,220 DEBUG   SenderThread:178402 [sender.py:send():382] send: run
+2024-04-21 00:49:24,871 INFO    SenderThread:178402 [dir_watcher.py:__init__():211] watching files in: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files
+2024-04-21 00:49:24,871 INFO    SenderThread:178402 [sender.py:_start_run_threads():1136] run started: 8h4urn3d with start time 1713640764.214638
+2024-04-21 00:49:24,881 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: check_version
+2024-04-21 00:49:24,881 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: check_version
+2024-04-21 00:49:24,961 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: run_start
+2024-04-21 00:49:24,976 DEBUG   HandlerThread:178402 [system_info.py:__init__():32] System info init
+2024-04-21 00:49:24,976 DEBUG   HandlerThread:178402 [system_info.py:__init__():47] System info init done
+2024-04-21 00:49:24,977 INFO    HandlerThread:178402 [system_monitor.py:start():194] Starting system monitor
+2024-04-21 00:49:24,977 INFO    SystemMonitor:178402 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-21 00:49:24,977 INFO    HandlerThread:178402 [system_monitor.py:probe():214] Collecting system info
+2024-04-21 00:49:24,978 INFO    SystemMonitor:178402 [interfaces.py:start():190] Started cpu monitoring
+2024-04-21 00:49:24,978 INFO    SystemMonitor:178402 [interfaces.py:start():190] Started disk monitoring
+2024-04-21 00:49:24,979 INFO    SystemMonitor:178402 [interfaces.py:start():190] Started gpu monitoring
+2024-04-21 00:49:24,979 INFO    SystemMonitor:178402 [interfaces.py:start():190] Started memory monitoring
+2024-04-21 00:49:24,980 INFO    SystemMonitor:178402 [interfaces.py:start():190] Started network monitoring
+2024-04-21 00:49:25,015 DEBUG   HandlerThread:178402 [system_info.py:probe():196] Probing system
+2024-04-21 00:49:25,017 DEBUG   HandlerThread:178402 [system_info.py:_probe_git():181] Probing git
+2024-04-21 00:49:25,021 DEBUG   HandlerThread:178402 [system_info.py:_probe_git():189] Probing git done
+2024-04-21 00:49:25,021 DEBUG   HandlerThread:178402 [system_info.py:probe():244] Probing system done
+2024-04-21 00:49:25,021 DEBUG   HandlerThread:178402 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-27-generic-x86_64-with-glibc2.35', 'python': '3.11.5', 'heartbeatAt': '2024-04-20T19:19:25.015743', 'startedAt': '2024-04-20T19:19:24.211541', 'docker': None, 'cuda': None, 'args': ('config/train_gpt2.py',), 'state': 'running', 'program': '/home/loki/projects/adgpt/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/rokosbasilisk/nanoGPT.git', 'commit': '2a7889e2803a9dd46e79dd0182c922537911cdc9'}, 'email': 'ram.bharadwaj.arya@gmail.com', 'root': '/home/loki/projects/adgpt', 'host': 'asgard', 'username': 'loki', 'executable': '/home/loki/anaconda3/envs/rb/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 2447.5647187500003, 'min': 1800.0, 'max': 3600.0}, 'cpu_freq_per_core': [{'current': 2237.489, 'min': 1800.0, 'max': 3600.0}, {'current': 2523.411, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 2764.117, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 2729.186, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 3430.851, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 3600.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 3600.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 3600.0, 'min': 1800.0, 'max': 3600.0}, {'current': 3428.406, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 3513.525, 'min': 1800.0, 'max': 3600.0}, {'current': 3600.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 3693.354, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 2498.15, 'min': 1800.0, 'max': 3600.0}, {'current': 2538.023, 'min': 1800.0, 'max': 3600.0}, {'current': 1924.552, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 4290.258, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 4291.934, 'min': 1800.0, 'max': 3600.0}, {'current': 2700.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 3600.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 1800.0, 'min': 1800.0, 'max': 3600.0}, {'current': 3426.108, 'min': 1800.0, 'max': 3600.0}, {'current': 4290.259, 'min': 1800.0, 'max': 3600.0}], 'disk': {'/': {'total': 1832.2072448730469, 'used': 688.9151611328125}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 6, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 251.52253341674805}}
+2024-04-21 00:49:25,021 INFO    HandlerThread:178402 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-21 00:49:25,021 INFO    HandlerThread:178402 [system_monitor.py:probe():227] Publishing system info
+2024-04-21 00:49:25,021 DEBUG   HandlerThread:178402 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-04-21 00:49:25,021 DEBUG   HandlerThread:178402 [system_info.py:_save_pip():68] Saving pip packages done
+2024-04-21 00:49:25,021 DEBUG   HandlerThread:178402 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2024-04-21 00:49:25,872 INFO    Thread-12 :178402 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/conda-environment.yaml
+2024-04-21 00:49:25,872 INFO    Thread-12 :178402 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/requirements.txt
+2024-04-21 00:49:26,599 DEBUG   HandlerThread:178402 [system_info.py:_save_conda():87] Saving conda packages done
+2024-04-21 00:49:26,600 INFO    HandlerThread:178402 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-21 00:49:26,601 DEBUG   SenderThread:178402 [sender.py:send():382] send: files
+2024-04-21 00:49:26,601 INFO    SenderThread:178402 [sender.py:_save_file():1392] saving file wandb-metadata.json with policy now
+2024-04-21 00:49:26,606 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-21 00:49:26,607 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: stop_status
+2024-04-21 00:49:26,608 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-21 00:49:26,871 INFO    Thread-12 :178402 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/conda-environment.yaml
+2024-04-21 00:49:26,872 INFO    Thread-12 :178402 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/wandb-metadata.json
+2024-04-21 00:49:26,999 DEBUG   SenderThread:178402 [sender.py:send():382] send: telemetry
+2024-04-21 00:49:27,591 INFO    wandb-upload_0:178402 [upload_job.py:push():131] Uploaded file /tmp/tmpw_11_h6qwandb/vn0x94gh-wandb-metadata.json
+2024-04-21 00:49:30,000 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: status_report
+2024-04-21 00:49:35,000 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: status_report
+2024-04-21 00:49:38,523 DEBUG   SenderThread:178402 [sender.py:send():382] send: exit
+2024-04-21 00:49:38,523 INFO    SenderThread:178402 [sender.py:send_exit():589] handling exit code: 255
+2024-04-21 00:49:38,523 INFO    SenderThread:178402 [sender.py:send_exit():591] handling runtime: 13
+2024-04-21 00:49:38,525 INFO    SenderThread:178402 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-04-21 00:49:38,525 INFO    SenderThread:178402 [sender.py:send_exit():597] send defer
+2024-04-21 00:49:38,525 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:38,525 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 0
+2024-04-21 00:49:38,525 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: defer
+2024-04-21 00:49:38,525 INFO    SenderThread:178402 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-04-21 00:49:38,526 INFO    SenderThread:178402 [sender.py:transition_state():617] send defer: 1
+2024-04-21 00:49:38,526 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:38,526 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 1
+2024-04-21 00:49:38,526 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: defer
+2024-04-21 00:49:38,526 INFO    SenderThread:178402 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-04-21 00:49:38,526 INFO    SenderThread:178402 [sender.py:transition_state():617] send defer: 2
+2024-04-21 00:49:38,526 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:38,526 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 2
+2024-04-21 00:49:38,526 INFO    HandlerThread:178402 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-21 00:49:38,526 DEBUG   SystemMonitor:178402 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-21 00:49:38,527 DEBUG   SystemMonitor:178402 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-21 00:49:38,527 INFO    HandlerThread:178402 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-21 00:49:38,527 DEBUG   SystemMonitor:178402 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-21 00:49:38,527 INFO    HandlerThread:178402 [interfaces.py:finish():202] Joined disk monitor
+2024-04-21 00:49:38,730 INFO    HandlerThread:178402 [interfaces.py:finish():202] Joined gpu monitor
+2024-04-21 00:49:38,731 INFO    HandlerThread:178402 [interfaces.py:finish():202] Joined memory monitor
+2024-04-21 00:49:38,731 INFO    HandlerThread:178402 [interfaces.py:finish():202] Joined network monitor
+2024-04-21 00:49:38,731 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: defer
+2024-04-21 00:49:38,731 INFO    SenderThread:178402 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-04-21 00:49:38,731 INFO    SenderThread:178402 [sender.py:transition_state():617] send defer: 3
+2024-04-21 00:49:38,731 DEBUG   SenderThread:178402 [sender.py:send():382] send: stats
+2024-04-21 00:49:38,732 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:38,732 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 3
+2024-04-21 00:49:38,732 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: defer
+2024-04-21 00:49:38,732 INFO    SenderThread:178402 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-04-21 00:49:38,732 INFO    SenderThread:178402 [sender.py:transition_state():617] send defer: 4
+2024-04-21 00:49:38,732 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:38,732 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 4
+2024-04-21 00:49:38,732 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: defer
+2024-04-21 00:49:38,732 INFO    SenderThread:178402 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-04-21 00:49:38,732 INFO    SenderThread:178402 [sender.py:transition_state():617] send defer: 5
+2024-04-21 00:49:38,733 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:38,733 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 5
+2024-04-21 00:49:38,733 DEBUG   SenderThread:178402 [sender.py:send():382] send: summary
+2024-04-21 00:49:38,733 INFO    SenderThread:178402 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-04-21 00:49:38,733 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: defer
+2024-04-21 00:49:38,733 INFO    SenderThread:178402 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-04-21 00:49:38,733 INFO    SenderThread:178402 [sender.py:transition_state():617] send defer: 6
+2024-04-21 00:49:38,733 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:38,733 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 6
+2024-04-21 00:49:38,733 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: defer
+2024-04-21 00:49:38,733 INFO    SenderThread:178402 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-04-21 00:49:38,735 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: status_report
+2024-04-21 00:49:38,874 INFO    Thread-12 :178402 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/wandb-summary.json
+2024-04-21 00:49:38,875 INFO    Thread-12 :178402 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/output.log
+2024-04-21 00:49:39,054 INFO    SenderThread:178402 [sender.py:transition_state():617] send defer: 7
+2024-04-21 00:49:39,054 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:39,055 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 7
+2024-04-21 00:49:39,055 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: defer
+2024-04-21 00:49:39,055 INFO    SenderThread:178402 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-04-21 00:49:39,474 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-21 00:49:39,875 INFO    Thread-12 :178402 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/config.yaml
+2024-04-21 00:49:40,377 INFO    SenderThread:178402 [sender.py:transition_state():617] send defer: 8
+2024-04-21 00:49:40,377 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: poll_exit
+2024-04-21 00:49:40,377 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:40,378 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 8
+2024-04-21 00:49:40,378 DEBUG   SenderThread:178402 [sender.py:send_request():409] send_request: defer
+2024-04-21 00:49:40,378 INFO    SenderThread:178402 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-04-21 00:49:40,378 INFO    SenderThread:178402 [job_builder.py:build():298] Attempting to build job artifact
+2024-04-21 00:49:40,379 INFO    SenderThread:178402 [job_builder.py:_get_source_type():428] is repo sourced job
+2024-04-21 00:49:40,390 INFO    SenderThread:178402 [job_builder.py:build():404] adding wandb-job metadata file
+2024-04-21 00:49:40,407 INFO    SenderThread:178402 [sender.py:transition_state():617] send defer: 9
+2024-04-21 00:49:40,407 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: defer
+2024-04-21 00:49:40,408 INFO    HandlerThread:178402 [handler.py:handle_request_defer():172] handle defer: 9
+2024-04-21 00:49:40,408 DEBUG   SenderThread:178402 [sender.py:send():382] send: artifact
+2024-04-21 00:49:40,474 DEBUG   HandlerThread:178402 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-21 00:49:40,876 INFO    Thread-12 :178402 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/output.log
+2024-04-21 00:49:41,219 WARNING StreamThr :178402 [internal.py:is_dead():414] Internal process exiting, parent pid 178092 disappeared
+2024-04-21 00:49:41,219 ERROR   StreamThr :178402 [internal.py:wandb_internal():152] Internal process shutdown.
+2024-04-21 00:49:41,475 INFO    HandlerThread:178402 [handler.py:finish():866] shutting down handler
+2024-04-21 00:49:41,475 INFO    WriterThread:178402 [datastore.py:close():294] close: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/run-8h4urn3d.wandb
+2024-04-21 00:49:41,757 INFO    SenderThread:178402 [sender.py:send_artifact():1470] sent artifact job-https___github.com_rokosbasilisk_nanoGPT.git_train.py - {'id': 'QXJ0aWZhY3Q6ODA0MDYzODMx', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE2MzIwNDczNg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODA0MDYzODMx', 'versionIndex': 2}}}
+2024-04-21 00:49:41,757 INFO    SenderThread:178402 [sender.py:finish():1548] shutting down sender
+2024-04-21 00:49:41,757 INFO    SenderThread:178402 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-21 00:49:41,877 INFO    SenderThread:178402 [dir_watcher.py:finish():388] scan: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files
+2024-04-21 00:49:41,877 INFO    SenderThread:178402 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/config.yaml config.yaml
+2024-04-21 00:49:41,877 INFO    SenderThread:178402 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/requirements.txt requirements.txt
+2024-04-21 00:49:41,877 INFO    SenderThread:178402 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/output.log output.log
+2024-04-21 00:49:41,878 INFO    SenderThread:178402 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/wandb-metadata.json wandb-metadata.json
+2024-04-21 00:49:41,878 INFO    SenderThread:178402 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/wandb-summary.json wandb-summary.json
+2024-04-21 00:49:41,880 INFO    SenderThread:178402 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/conda-environment.yaml conda-environment.yaml
+2024-04-21 00:49:41,883 INFO    SenderThread:178402 [file_pusher.py:finish():175] shutting down file pusher
+2024-04-21 00:49:41,885 INFO    SenderThread:178402 [file_pusher.py:join():181] waiting for file pusher
+2024-04-21 00:49:42,488 INFO    wandb-upload_0:178402 [upload_job.py:push():131] Uploaded file /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/requirements.txt
+2024-04-21 00:49:42,669 INFO    wandb-upload_4:178402 [upload_job.py:push():131] Uploaded file /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/conda-environment.yaml
+2024-04-21 00:49:42,673 INFO    wandb-upload_3:178402 [upload_job.py:push():131] Uploaded file /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/wandb-summary.json
+2024-04-21 00:49:42,760 INFO    wandb-upload_1:178402 [upload_job.py:push():131] Uploaded file /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/config.yaml
+2024-04-21 00:49:42,800 INFO    wandb-upload_2:178402 [upload_job.py:push():131] Uploaded file /home/loki/projects/adgpt/wandb/run-20240421_004924-8h4urn3d/files/output.log
+2024-04-21 00:49:43,387 INFO    SenderThread:178402 [file_stream.py:finish():595] file stream finish called
+2024-04-21 00:49:43,722 INFO    SenderThread:178402 [file_stream.py:finish():599] file stream finish is done

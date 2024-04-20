@@ -1,0 +1,82 @@
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_setup.py:_flush():76] Current SDK version is 0.16.1
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_setup.py:_flush():76] Configure stats pid to 177573
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_setup.py:_flush():76] Loading settings from /home/loki/.config/wandb/settings
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_setup.py:_flush():76] Loading settings from /home/loki/projects/adgpt/wandb/settings
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': '/home/loki/projects/adgpt/train.py', 'program': '/home/loki/projects/adgpt/train.py'}
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_init.py:_log_setup():524] Logging user logs to /home/loki/projects/adgpt/wandb/run-20240421_004858-gli22bsf/logs/debug.log
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_init.py:_log_setup():525] Logging internal logs to /home/loki/projects/adgpt/wandb/run-20240421_004858-gli22bsf/logs/debug-internal.log
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_init.py:init():564] calling init triggers
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'out_dir': 'out', 'eval_interval': 1000, 'log_interval': 10, 'eval_iters': 200, 'eval_only': False, 'always_save_checkpoint': True, 'init_from': 'scratch', 'wandb_log': True, 'wandb_project': 'owt', 'wandb_run_name': 'gpt2-124M', 'dataset': 'openwebtext', 'gradient_accumulation_steps': 40, 'batch_size': 6, 'block_size': 1024, 'n_layer': 12, 'n_head': 12, 'n_embd': 768, 'dropout': 0.0, 'bias': False, 'learning_rate': 0.0006, 'max_iters': 600000, 'weight_decay': 0.1, 'beta1': 0.9, 'beta2': 0.95, 'grad_clip': 1.0, 'decay_lr': True, 'warmup_iters': 2000, 'lr_decay_iters': 600000, 'min_lr': 6e-05, 'backend': 'nccl', 'device': 'cuda', 'dtype': 'bfloat16', 'compile': True}
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_init.py:init():614] starting backend
+2024-04-21 00:48:58,494 INFO    MainThread:177573 [wandb_init.py:init():618] setting up manager
+2024-04-21 00:48:58,495 INFO    MainThread:177573 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-04-21 00:48:58,504 INFO    MainThread:177573 [wandb_init.py:init():624] backend started and connected
+2024-04-21 00:48:58,505 INFO    MainThread:177573 [wandb_init.py:init():716] updated telemetry
+2024-04-21 00:48:58,509 INFO    MainThread:177573 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-04-21 00:48:59,167 INFO    MainThread:177573 [wandb_run.py:_on_init():2254] communicating current version
+2024-04-21 00:48:59,475 INFO    MainThread:177573 [wandb_run.py:_on_init():2263] got version response upgrade_message: "wandb version 0.16.6 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-04-21 00:48:59,475 INFO    MainThread:177573 [wandb_init.py:init():800] starting run threads in backend
+2024-04-21 00:49:01,030 WARNING MainThread:177573 [wandb_init.py:init():1192] interrupted
+Traceback (most recent call last):
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 1170, in init
+    run = wi.init()
+          ^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 811, in init
+    run_start_result = run_start_handle.wait(timeout=30)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/wandb/sdk/lib/mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/wandb/sdk/lib/mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/wandb/sdk/lib/mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/threading.py", line 622, in wait
+    signaled = self._cond.wait(timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 1178, in init
+    getcaller()
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 848, in getcaller
+    src, line, func, stack = logger.findCaller(stack_info=True)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/logging/__init__.py", line 1589, in findCaller
+    traceback.print_stack(f, file=sio)
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 210, in print_stack
+    print_list(extract_stack(f, limit=limit), file=file)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 231, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 393, in extract
+    return klass._extract_from_extended_frame_gen(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 436, in _extract_from_extended_frame_gen
+    f.line
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 321, in line
+    self._line = linecache.getline(self.filename, self.lineno)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/linecache.py", line 30, in getline
+    lines = getlines(filename, module_globals)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/linecache.py", line 46, in getlines
+    return updatecache(filename, module_globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/linecache.py", line 137, in updatecache
+    lines = fp.readlines()
+            ^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 319, in decode
+KeyboardInterrupt

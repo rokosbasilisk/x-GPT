@@ -1,0 +1,22 @@
+
+step 0: train loss 10.9737, val loss 10.9741
+iter 0: loss 10.9683, time 120580.61ms, mfu -100.00%
+iter 10: loss 10.5164, time 2468.94ms, mfu 28.18%
+iter 20: loss 9.9682, time 2480.53ms, mfu 28.17%
+iter 30: loss 9.5789, time 2470.09ms, mfu 28.17%
+iter 40: loss 9.6181, time 2471.46ms, mfu 28.17%
+iter 50: loss 9.2756, time 2489.46ms, mfu 28.15%
+iter 60: loss 9.1893, time 2482.17ms, mfu 28.13%
+iter 70: loss 8.9555, time 2531.28ms, mfu 28.07%
+iter 80: loss 8.7704, time 2498.94ms, mfu 28.05%
+iter 90: loss 8.4374, time 2483.17ms, mfu 28.04%
+iter 100: loss 8.4796, time 2483.82ms, mfu 28.04%
+iter 110: loss 7.9893, time 2501.76ms, mfu 28.02%
+Traceback (most recent call last):
+  File "/home/loki/projects/nanoGPT/train.py", line 305, in <module>
+    scaler.scale(loss).backward()
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/torch/autograd/__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
