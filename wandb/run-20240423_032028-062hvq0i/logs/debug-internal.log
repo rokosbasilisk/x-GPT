@@ -1,0 +1,144 @@
+2024-04-23 03:20:28,986 INFO    StreamThr :101904 [internal.py:wandb_internal():86] W&B internal server running at pid: 101904, started at: 2024-04-23 03:20:28.985915
+2024-04-23 03:20:28,988 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status
+2024-04-23 03:20:28,990 INFO    WriterThread:101904 [datastore.py:open_for_write():87] open: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/run-062hvq0i.wandb
+2024-04-23 03:20:28,990 DEBUG   SenderThread:101904 [sender.py:send():382] send: header
+2024-04-23 03:20:28,991 DEBUG   SenderThread:101904 [sender.py:send():382] send: run
+2024-04-23 03:20:29,622 INFO    SenderThread:101904 [dir_watcher.py:__init__():211] watching files in: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files
+2024-04-23 03:20:29,622 INFO    SenderThread:101904 [sender.py:_start_run_threads():1136] run started: 062hvq0i with start time 1713822628.985414
+2024-04-23 03:20:29,632 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: check_version
+2024-04-23 03:20:29,632 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: check_version
+2024-04-23 03:20:29,708 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: run_start
+2024-04-23 03:20:29,725 DEBUG   HandlerThread:101904 [system_info.py:__init__():27] System info init
+2024-04-23 03:20:29,726 DEBUG   HandlerThread:101904 [system_info.py:__init__():42] System info init done
+2024-04-23 03:20:29,726 INFO    HandlerThread:101904 [system_monitor.py:start():194] Starting system monitor
+2024-04-23 03:20:29,726 INFO    SystemMonitor:101904 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-23 03:20:29,726 INFO    HandlerThread:101904 [system_monitor.py:probe():214] Collecting system info
+2024-04-23 03:20:29,727 INFO    SystemMonitor:101904 [interfaces.py:start():190] Started cpu monitoring
+2024-04-23 03:20:29,728 INFO    SystemMonitor:101904 [interfaces.py:start():190] Started disk monitoring
+2024-04-23 03:20:29,729 INFO    SystemMonitor:101904 [interfaces.py:start():190] Started gpu monitoring
+2024-04-23 03:20:29,729 INFO    SystemMonitor:101904 [interfaces.py:start():190] Started memory monitoring
+2024-04-23 03:20:29,730 INFO    SystemMonitor:101904 [interfaces.py:start():190] Started network monitoring
+2024-04-23 03:20:29,764 DEBUG   HandlerThread:101904 [system_info.py:probe():151] Probing system
+2024-04-23 03:20:29,767 DEBUG   HandlerThread:101904 [system_info.py:_probe_git():136] Probing git
+2024-04-23 03:20:29,773 DEBUG   HandlerThread:101904 [system_info.py:_probe_git():144] Probing git done
+2024-04-23 03:20:29,773 DEBUG   HandlerThread:101904 [system_info.py:probe():199] Probing system done
+2024-04-23 03:20:29,773 DEBUG   HandlerThread:101904 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-28-generic-x86_64-with-glibc2.35', 'python': '3.11.5', 'heartbeatAt': '2024-04-22T21:50:29.764630', 'startedAt': '2024-04-22T21:50:28.982676', 'docker': None, 'cuda': None, 'args': ('config/train_gpt2.py',), 'state': 'running', 'program': '/home/loki/projects/adgpt/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/rokosbasilisk/nanoGPT.git', 'commit': 'b2f8aa23e8c4a136731e28dda6d79679bb6be566'}, 'email': 'ram.bharadwaj.arya@gmail.com', 'root': '/home/loki/projects/adgpt', 'host': 'asgard', 'username': 'loki', 'executable': '/home/loki/anaconda3/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 2.0905468749999985, 'min': 1800.0, 'max': 3600.0}, 'cpu_freq_per_core': [{'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.878, 'min': 1800.0, 'max': 3600.0}, {'current': 2.153, 'min': 1800.0, 'max': 3600.0}, {'current': 1.852, 'min': 1800.0, 'max': 3600.0}, {'current': 2.157, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 2.155, 'min': 1800.0, 'max': 3600.0}, {'current': 2.694, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 2.2, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.911, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 2.761, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}], 'disk': {'/': {'total': 1832.2072448730469, 'used': 701.0908470153809}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 6, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 251.52252960205078}}
+2024-04-23 03:20:29,773 INFO    HandlerThread:101904 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-23 03:20:29,773 INFO    HandlerThread:101904 [system_monitor.py:probe():227] Publishing system info
+2024-04-23 03:20:29,773 DEBUG   HandlerThread:101904 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-04-23 03:20:30,623 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/conda-environment.yaml
+2024-04-23 03:20:33,876 DEBUG   HandlerThread:101904 [system_info.py:_save_conda():220] Saving conda packages done
+2024-04-23 03:20:33,877 INFO    HandlerThread:101904 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-23 03:20:33,879 DEBUG   SenderThread:101904 [sender.py:send():382] send: files
+2024-04-23 03:20:33,880 INFO    SenderThread:101904 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-04-23 03:20:33,885 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: python_packages
+2024-04-23 03:20:33,885 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: python_packages
+2024-04-23 03:20:33,885 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:20:33,886 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:20:33,887 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:20:34,319 DEBUG   SenderThread:101904 [sender.py:send():382] send: telemetry
+2024-04-23 03:20:34,319 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:20:34,623 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/conda-environment.yaml
+2024-04-23 03:20:34,623 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/wandb-metadata.json
+2024-04-23 03:20:34,623 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/requirements.txt
+2024-04-23 03:20:35,012 INFO    wandb-upload_0:101904 [upload_job.py:push():131] Uploaded file /tmp/tmpe14tpln2wandb/lhqc3phj-wandb-metadata.json
+2024-04-23 03:20:39,320 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:20:44,321 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:20:48,888 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:20:48,888 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:20:48,889 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:20:50,219 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:20:55,220 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:00,224 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:00,630 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/config.yaml
+2024-04-23 03:21:03,897 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:21:03,932 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:21:03,933 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:21:06,237 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:11,238 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:16,239 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:18,894 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:21:18,895 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:21:18,897 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:21:21,265 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:26,266 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:29,730 DEBUG   SystemMonitor:101904 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-23 03:21:29,738 DEBUG   SenderThread:101904 [sender.py:send():382] send: stats
+2024-04-23 03:21:31,739 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:33,895 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:21:33,895 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:21:33,935 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:21:36,640 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/output.log
+2024-04-23 03:21:36,680 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-23 03:21:36,681 DEBUG   SenderThread:101904 [sender.py:send():382] send: history
+2024-04-23 03:21:36,681 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: summary_record
+2024-04-23 03:21:36,681 INFO    SenderThread:101904 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-23 03:21:37,640 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/wandb-summary.json
+2024-04-23 03:21:37,682 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:38,641 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/output.log
+2024-04-23 03:21:42,682 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:47,683 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:48,915 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:21:48,916 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:21:48,949 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:21:53,219 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:58,220 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:21:59,733 DEBUG   SenderThread:101904 [sender.py:send():382] send: stats
+2024-04-23 03:22:03,734 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:03,907 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:22:03,907 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:22:03,951 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:22:09,205 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:14,205 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:18,905 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:22:18,906 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:22:18,947 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:22:19,208 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:24,208 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:29,209 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:29,734 DEBUG   SenderThread:101904 [sender.py:send():382] send: stats
+2024-04-23 03:22:33,939 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:22:33,939 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:22:33,983 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:22:34,316 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:39,316 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:44,317 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:48,990 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:22:49,153 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:22:49,154 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:22:49,426 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:54,427 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:59,428 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:22:59,735 DEBUG   SenderThread:101904 [sender.py:send():382] send: stats
+2024-04-23 03:23:03,991 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:23:03,991 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:23:03,991 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:23:05,298 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:23:08,668 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/output.log
+2024-04-23 03:23:10,667 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:23:15,668 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:23:18,990 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:23:18,991 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:23:18,991 DEBUG   SenderThread:101904 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:23:21,340 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:23:26,341 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:23:28,674 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/output.log
+2024-04-23 03:23:29,737 DEBUG   SenderThread:101904 [sender.py:send():382] send: stats
+2024-04-23 03:23:31,738 DEBUG   HandlerThread:101904 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:23:33,772 INFO    memory    :101904 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2024-04-23 03:23:33,772 DEBUG   SystemMonitor:101904 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-23 03:23:33,773 DEBUG   SystemMonitor:101904 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-23 03:23:33,775 DEBUG   SenderThread:101904 [sender.py:send():382] send: stats
+2024-04-23 03:23:34,006 WARNING StreamThr :101904 [internal.py:is_dead():414] Internal process exiting, parent pid 101751 disappeared
+2024-04-23 03:23:34,006 ERROR   StreamThr :101904 [internal.py:wandb_internal():152] Internal process shutdown.
+2024-04-23 03:23:34,676 INFO    Thread-12 :101904 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/files/output.log
+2024-04-23 03:23:34,775 INFO    HandlerThread:101904 [handler.py:finish():869] shutting down handler
+2024-04-23 03:23:34,775 INFO    WriterThread:101904 [datastore.py:close():296] close: /home/loki/projects/adgpt/wandb/run-20240423_032028-062hvq0i/run-062hvq0i.wandb
+2024-04-23 03:23:34,775 INFO    HandlerThread:101904 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-23 03:23:34,776 INFO    HandlerThread:101904 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-23 03:23:34,776 INFO    HandlerThread:101904 [interfaces.py:finish():202] Joined disk monitor
+2024-04-23 03:23:34,776 INFO    HandlerThread:101904 [interfaces.py:finish():202] Joined gpu monitor
+2024-04-23 03:23:34,776 INFO    HandlerThread:101904 [interfaces.py:finish():202] Joined memory monitor
+2024-04-23 03:23:34,776 INFO    HandlerThread:101904 [interfaces.py:finish():202] Joined network monitor
+2024-04-23 03:23:34,777 INFO    SenderThread:101904 [sender.py:finish():1572] shutting down sender
+2024-04-23 03:23:35,745 INFO    MainThread:101904 [internal.py:handle_exit():76] Internal process exited

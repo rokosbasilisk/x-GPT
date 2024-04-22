@@ -1,0 +1,52 @@
+
+step 0: train loss 13.3217, val loss 13.2954
+iter 0: loss 13.5621, time 133318.45ms, mfu -100.00%
+iter 10: loss 13.1878, time 1983.30ms, mfu 35.10%
+iter 20: loss 13.9585, time 1974.32ms, mfu 35.12%
+iter 30: loss 12.5469, time 1975.13ms, mfu 35.13%
+iter 40: loss 12.4246, time 1975.88ms, mfu 35.14%
+iter 50: loss 13.0184, time 1991.34ms, mfu 35.12%
+iter 60: loss 12.2354, time 1988.82ms, mfu 35.11%
+iter 70: loss 11.2753, time 1991.15ms, mfu 35.09%
+iter 80: loss 10.5004, time 1914.65ms, mfu 35.22%
+iter 90: loss 10.1715, time 1916.27ms, mfu 35.33%
+iter 100: loss 9.6484, time 1917.68ms, mfu 35.43%
+iter 110: loss 9.3165, time 1916.72ms, mfu 35.52%
+iter 120: loss 9.0290, time 1915.50ms, mfu 35.60%
+iter 130: loss 8.9274, time 1924.00ms, mfu 35.66%
+iter 140: loss 8.2954, time 1911.53ms, mfu 35.73%
+iter 150: loss 8.3125, time 1913.53ms, mfu 35.80%
+iter 160: loss 8.0500, time 1914.32ms, mfu 35.85%
+iter 170: loss 8.0369, time 1913.56ms, mfu 35.91%
+iter 180: loss 8.0696, time 1914.43ms, mfu 35.95%
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/site-packages/wandb/sdk/lib/exit_hooks.py", line 52, in exc_handler
+    traceback.print_exception(exc_type, exc, tb)
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 124, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 692, in __init__
+    self.stack = StackSummary._extract_from_extended_frame_gen(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 416, in _extract_from_extended_frame_gen
+    for f, (lineno, end_lineno, colno, end_colno) in frame_gen:
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 353, in _walk_tb_with_full_positions
+    positions = _get_code_position(tb.tb_frame.f_code, tb.tb_lasti)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/anaconda3/envs/rb/lib/python3.11/traceback.py", line 367, in _get_code_position
+    return next(itertools.islice(positions_gen, instruction_index // 2, None))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Original exception was:
+Traceback (most recent call last):
+  File "/home/loki/projects/adgpt/train.py", line 313, in <module>
+    X, Y = get_batch('train')
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/loki/projects/adgpt/train.py", line 126, in get_batch
+    x = torch.stack([torch.from_numpy((data[i:i+block_size]).astype(np.int64)) for i in ix])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/loki/projects/adgpt/train.py", line 126, in <listcomp>
+    x = torch.stack([torch.from_numpy((data[i:i+block_size]).astype(np.int64)) for i in ix])
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

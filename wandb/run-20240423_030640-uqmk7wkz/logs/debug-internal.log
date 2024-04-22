@@ -56,3 +56,64 @@
 2024-04-23 03:07:16,742 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: internal_messages
 2024-04-23 03:07:19,060 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
 2024-04-23 03:07:24,060 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:07:29,061 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:07:31,684 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:07:31,694 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:07:31,695 DEBUG   SenderThread:92277 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:07:35,032 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:07:40,032 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:07:42,500 DEBUG   SystemMonitor:92277 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-23 03:07:42,502 DEBUG   SenderThread:92277 [sender.py:send():382] send: stats
+2024-04-23 03:07:45,503 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:07:46,684 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:07:46,694 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:07:46,695 DEBUG   SenderThread:92277 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:07:51,012 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:07:56,013 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:08:01,014 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:08:01,684 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:08:01,695 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:08:01,695 DEBUG   SenderThread:92277 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:08:06,995 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:08:11,996 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:08:12,503 DEBUG   SenderThread:92277 [sender.py:send():382] send: stats
+2024-04-23 03:08:16,685 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:08:16,695 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:08:16,695 DEBUG   SenderThread:92277 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:08:17,080 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:08:22,080 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:08:27,081 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:08:31,685 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-23 03:08:31,695 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-23 03:08:31,695 DEBUG   SenderThread:92277 [sender.py:send_request():409] send_request: stop_status
+2024-04-23 03:08:33,036 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:08:38,037 DEBUG   HandlerThread:92277 [handler.py:handle_request():146] handle_request: status_report
+2024-04-23 03:08:41,445 INFO    Thread-12 :92277 [dir_watcher.py:_on_file_created():271] file/dir created: /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/output.log
+2024-04-23 03:08:41,657 WARNING StreamThr :92277 [internal.py:is_dead():414] Internal process exiting, parent pid 91892 disappeared
+2024-04-23 03:08:41,657 ERROR   StreamThr :92277 [internal.py:wandb_internal():152] Internal process shutdown.
+2024-04-23 03:08:42,231 INFO    HandlerThread:92277 [handler.py:finish():869] shutting down handler
+2024-04-23 03:08:42,231 INFO    HandlerThread:92277 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-23 03:08:42,231 DEBUG   SystemMonitor:92277 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-23 03:08:42,232 INFO    SenderThread:92277 [sender.py:finish():1572] shutting down sender
+2024-04-23 03:08:42,232 INFO    HandlerThread:92277 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-23 03:08:42,233 DEBUG   SystemMonitor:92277 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-23 03:08:42,233 INFO    WriterThread:92277 [datastore.py:close():296] close: /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/run-uqmk7wkz.wandb
+2024-04-23 03:08:42,233 INFO    HandlerThread:92277 [interfaces.py:finish():202] Joined disk monitor
+2024-04-23 03:08:42,236 INFO    HandlerThread:92277 [interfaces.py:finish():202] Joined gpu monitor
+2024-04-23 03:08:42,236 INFO    HandlerThread:92277 [interfaces.py:finish():202] Joined memory monitor
+2024-04-23 03:08:42,236 INFO    HandlerThread:92277 [interfaces.py:finish():202] Joined network monitor
+2024-04-23 03:08:43,240 INFO    SenderThread:92277 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-23 03:08:43,447 INFO    SenderThread:92277 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/output.log
+2024-04-23 03:08:43,447 INFO    SenderThread:92277 [dir_watcher.py:finish():388] scan: /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files
+2024-04-23 03:08:43,448 INFO    SenderThread:92277 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/config.yaml config.yaml
+2024-04-23 03:08:43,448 INFO    SenderThread:92277 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/requirements.txt requirements.txt
+2024-04-23 03:08:43,448 INFO    SenderThread:92277 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/output.log output.log
+2024-04-23 03:08:43,448 INFO    SenderThread:92277 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/wandb-metadata.json wandb-metadata.json
+2024-04-23 03:08:43,448 INFO    SenderThread:92277 [dir_watcher.py:finish():402] scan save: /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/conda-environment.yaml conda-environment.yaml
+2024-04-23 03:08:43,448 INFO    SenderThread:92277 [file_pusher.py:finish():175] shutting down file pusher
+2024-04-23 03:08:43,449 INFO    SenderThread:92277 [file_pusher.py:join():181] waiting for file pusher
+2024-04-23 03:08:44,098 INFO    wandb-upload_1:92277 [upload_job.py:push():131] Uploaded file /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/config.yaml
+2024-04-23 03:08:44,254 INFO    wandb-upload_2:92277 [upload_job.py:push():131] Uploaded file /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/requirements.txt
+2024-04-23 03:08:44,298 INFO    wandb-upload_3:92277 [upload_job.py:push():131] Uploaded file /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/output.log
+2024-04-23 03:08:44,480 INFO    wandb-upload_0:92277 [upload_job.py:push():131] Uploaded file /home/loki/projects/adgpt/wandb/run-20240423_030640-uqmk7wkz/files/conda-environment.yaml
+2024-04-23 03:08:44,480 INFO    MainThread:92277 [internal.py:handle_exit():76] Internal process exited
