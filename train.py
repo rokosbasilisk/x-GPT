@@ -257,7 +257,7 @@ raw_model = model.module if ddp else model # unwrap DDP container if needed
 running_mfu = -1.0
 
 
-if override_args['is_additive']:
+if is_additive:
     for name, param in model.named_parameters():
         if 'mlp' not in name:
             param.requires_grad = False
@@ -341,8 +341,6 @@ while True:
     # termination conditions
     if iter_num > max_iters:
         break
-{key: value for key, value in sd_keys.items() if 'mlp' not in key}
 
 if ddp:
-{key: value for key, value in sd_keys.items() if 'mlp' not in key}
     destroy_process_group()
