@@ -53,6 +53,7 @@ n_layer = 12
 n_head = 12
 n_embd = 768
 dropout = 0.0 # for pretraining 0 is good, for finetuning try 0.1+
+is_additive = True
 bias = False # do we use bias inside LayerNorm and Linear layers?
 # adamw optimizer
 learning_rate = 6e-4 # max learning rate
@@ -182,7 +183,8 @@ elif init_from == 'resume':
 elif init_from.startswith('gpt2'):
     print(f"Initializing from OpenAI GPT-2 weights: {init_from}")
     # initialize from OpenAI GPT-2 weights
-    override_args = dict(dropout=dropout)
+    override_args = dict(dropout=dropout, is_additive=is_additive)
+    #TODO: add the relevant keys that are necessary for training adgpt
     model = GPT.from_pretrained(init_from, override_args) # modify this for adgpt
     # read off the created config params, so we can store them into checkpoint correctly
     for k in ['n_layer', 'n_head', 'n_embd', 'block_size', 'bias', 'vocab_size']:
@@ -253,6 +255,13 @@ t0 = time.time()
 local_iter_num = 0 # number of iterations in the lifetime of this process
 raw_model = model.module if ddp else model # unwrap DDP container if needed
 running_mfu = -1.0
+
+
+if override_args['is_additive']:
+    for name, param in model.named_parameters():
+        if 'mlp' not in name:
+            param.requires_grad = False
+
 while True:
 
     # determine and set the learning rate for this iteration
@@ -284,7 +293,8 @@ while True:
                     'config': config,
                 }
                 print(f"saving checkpoint to {out_dir}")
-                torch.save(checkpoint, os.path.join(out_dir, 'ckpt.pt'))
+   {key: value for key, value in sd_keys.items() if 'mlp' not in key}
+             torch.save(checkpoint, os.path.join(out_dir, 'ckpt.pt'))
     if iter_num == 0 and eval_only:
         break
 
@@ -332,6 +342,8 @@ while True:
     # termination conditions
     if iter_num > max_iters:
         break
+{key: value for key, value in sd_keys.items() if 'mlp' not in key}
 
 if ddp:
+{key: value for key, value in sd_keys.items() if 'mlp' not in key}
     destroy_process_group()
